@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: rgba(15, 23, 42, 0.08);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: #F8FAFC;
+    color: #0F172A;
+  }
+
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    overflow-x: hidden;
+  }
+
+  .dark {
+    background-color: #08090E;
+    color: #EDEDEF;
+  }
+
+  .dark * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Subtle Software Grid Lines - Light Mode by Default */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Subtle Software Tech Dots */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(81, 69, 230, 0.14) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Hide scrollbar for clean horizontal scrolls */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom styled developer scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+  border: 2px solid #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5145E6;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #08090E;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1C1F2E;
+  border: 2px solid #08090E;
+}
+
+/* Text balance */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Code block highlight */
+.code-highlight {
+  font-family: 'JetBrains Mono', monospace;
+}
