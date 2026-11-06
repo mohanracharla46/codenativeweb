@@ -5,7 +5,7 @@ import { projects } from "../data/projectsData";
 import ThreeDCard from "./ThreeDCard";
 
 const CATEGORIES = [
-  { id: "All", label: "All Projects (8)" },
+  { id: "All", label: `All Projects (${projects.length})` },
   { id: "SaaS & Web Apps", label: "SaaS & Web Apps" },
   { id: "Booking & Portals", label: "Booking & Portals" },
   { id: "Brand & Showcase", label: "Brand & Showcase" },
@@ -34,7 +34,7 @@ export default function SelectedWork({ onSelectProject }) {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF2FF] dark:bg-[#5145E6]/15 border border-[#5145E6]/30 text-xs font-mono font-semibold uppercase tracking-wider text-[#5145E6] dark:text-indigo-300 mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              8 LIVE PRODUCTION DEPLOYMENTS
+              {projects.length} LIVE PRODUCTION DEPLOYMENTS
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
               Selected Systems &amp; Live Products

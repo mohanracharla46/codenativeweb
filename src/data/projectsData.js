@@ -1,4 +1,4 @@
-export const projects = [
+export const allProjects = [
   {
     id: "codenative-lms",
     title: "CodeNative — Telugu Coding & AI EdTech Platform",
@@ -59,6 +59,7 @@ export const projects = [
   },
   {
     id: "gogo-cars",
+    hidden: true,
     title: "GoGo Cars — Self-Drive Mobility & Fleet Booking",
     category: "Booking & Portals",
     industry: "Automotive Rental & Urban Mobility",
@@ -232,6 +233,8 @@ export const projects = [
     }
   }
 ];
+
+export const projects = allProjects.filter(p => !p.hidden);
 
 export const projectCategories = [
   "All",
